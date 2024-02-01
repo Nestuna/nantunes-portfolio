@@ -1,0 +1,19 @@
+:root {
+  --background: linear-gradient(to bottom right, #0d0c12, #231F2E 50%);
+  --foreground: #292436;
+  --primary: #FFAA6B;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: var(--background) !important;
+}
+
