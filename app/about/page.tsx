@@ -1,9 +1,6 @@
 import {  Stack, Text } from "@chakra-ui/react"
-import { Card, CardBody, Wrap, WrapItem } from '@chakra-ui/react'
-import Image from 'next/image'
 
-import reactImage from '@/images/react.png'
-import angularImage from '@/images/angular.png'
+import { SkillsGrid } from "@/components/skillsList"
 
 const About = () => (
   <Stack>
@@ -24,42 +21,10 @@ const About = () => (
           section 1.10.32. The standard chunk of Lorem Ipsum used since the
           1500s is reproduced below for those interested.
     </Text>
-    <Skills />
   </Stack>
 )
 
-const Skills = () => {
-  const skills = ['react', 'angular', 'react', 'angular','react', 'angular','react', 'angular','react', 'angular',]
-  const skillImages: Record<string, object> = {
-    react: reactImage,
-    angular: angularImage
-  }
 
-  return (
-    <Wrap id="skills" spacing="2em" justify="center" py='2em'>
-      {skills.map((skill: string, index: number) => (
-        <WrapItem key={index}>
-          <SkillCard skill={skill} img={skillImages[skill]} />
-        </WrapItem>
-      ))}
-    </Wrap>
-  )
-}
-
-const SkillCard = ({ skill, img }: { skill: string, img: any }) => {
-  return (
-    <Card bgColor='foreground'>
-      <CardBody>
-        <Image
-          src={img}
-          alt={skill}
-          width="75"
-          height="75"
-        />
-      </CardBody>
-    </Card>
-  )
-}
 
 export default About
 

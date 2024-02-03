@@ -1,11 +1,13 @@
-import { ProjectsCardList } from "@/components/molecules/projectsList"
+import { ProjectsCardList } from '@/components/projectsList'
 
 const Projects = () => {
-  const projects = ['portfolio', 'portfolio', 'portfolio', 'portfolio', 'portfolio' ]
+  const projects = [
+    'Portfolio',
+    'Cuistou',
+    'Butterfly',
+  ]
 
-  return (
-    <ProjectsCardList projects={projects} />
-  )
+  return <ProjectsCardList projects={projects} />
 }
 
 export default Projects
