@@ -11,25 +11,21 @@ import {
   WrapItem,
 } from '@chakra-ui/react'
 
-export const ProjectsCardList = ({ projects }: any) => {
+
+type ProjectsProps = { projects: Project[] }
+export const ProjectsCardList = ({ projects }: ProjectsProps) => {
   return (
     <Wrap id="projects" spacing="2em" justify="center">
-      {projects.map((project: string, index: number) => (
+      {projects.map((project: Project, index: number) => (
         <WrapItem key={index}>
          <Card
           direction={{ base: 'column', sm: 'row' }}
           overflow='hidden'
           bgColor='foreground'
           color='whitesmoke'>
-          <Image
-            objectFit='cover'
-            maxW={{ base: '100%', sm: '200px' }}
-            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-            alt='Caffe Latte'
-          />
           <Stack>
             <CardBody>
-              <Heading size='md'>{ project }</Heading>
+              <Heading size='md'>{ project.title }</Heading>
 
               <Text py='2'>
                 Caffè latte is a coffee beverage of Italian origin made with espresso
