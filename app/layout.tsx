@@ -2,11 +2,16 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import { Box, Container, Flex, IconButton, ScaleFade, SlideFade, VStack } from '@chakra-ui/react'
-import { TriangleDownIcon } from '@chakra-ui/icons'
+import {
+  Box,
+  Container,
+  Flex,
+  ScaleFade,
+  SlideFade,
+  VStack,
+} from '@chakra-ui/react'
 import { Header } from '@/app/header'
-import NextPageIcon from '@/components/atoms/nextPageIcon'
-import { useRouter } from 'next/navigation'
+import { FadeContainer } from '@/components/fadeContainer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,47 +35,31 @@ export default function RootLayout({
             p="1em"
             color="whitesmoke"
             opacity={'.9'}>
-
-            <ScaleFade in={true} transition={{ enter: { duration: '1', ease: 'easeOut' } }} initialScale={0.8}>
-              <Flex
-                background="var(--border-background)"
-                px=".5em"
-                borderRadius="5%">
-                <Flex
-                  background="var(--background)"
-                  p="1.5em 5em"
-                  borderRadius="5%"
-                  gap="3em">
-                  <Box flex="2" overflow='hidden'>
-                    <SlideFade in={true} transition={{ enter: { duration: '1.5', ease: 'easeOut'}}} offsetY='10vh'>
-                      <Header />
-                    </SlideFade>
-                  </Box>
-
-                  <Flex
-                    id="main-content"
-                    direction={'column'}
-                    flex="3"
-                    h="90vh"
-                    p="1.5em"
-                    overflowY="auto"
-                    overflowX='hidden'>
-                     <Flex justifyContent={'center'}>
-                      <NextPageIcon direction='back' />
-                    </Flex>
-                    <SlideFade in={true} transition={{ enter: { duration: '1.5', ease: 'easeOut'}}} offsetX='10vw'>
-                      <Box h='75vh'>
-                        {children}
-                      </Box>
-                    </SlideFade>
-                    <Flex justifyContent={'center'}>
-                      <NextPageIcon direction='next' />
-                    </Flex>
-                  </Flex>
-                </Flex>
-              </Flex>
-            </ScaleFade>
-
+            <FadeContainer>
+              <Box flex="2" overflow="hidden">
+                <SlideFade
+                  in={true}
+                  transition={{
+                    enter: { duration: '1.5', ease: 'easeOut' },
+                  }}
+                  offsetY="10vh">
+                  <Header />
+                </SlideFade>
+              </Box>
+              <Box
+                id="main-content"
+                flex="3"
+                h="90vh"
+                p="1.5em"
+                overflowY="auto"
+                overflowX="hidden"
+                sx={{
+                  'mask-image':
+                    'linear-gradient(to bottom, black calc(100% - 48px), transparent 100%)',
+                }}>
+                {children}
+              </Box>
+            </FadeContainer>
           </Container>
         </Providers>
       </body>

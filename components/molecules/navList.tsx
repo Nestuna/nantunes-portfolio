@@ -2,13 +2,16 @@ import { Box, VStack} from '@chakra-ui/react'
 import { LinkItem } from '@/atoms/linkItem'
 
 interface INavListProps {
-  titles: string[]
+  links: {
+    title: string,
+    href: string
+  }[]
 }
-export const NavList = ({ titles  }: INavListProps) => (
+export const NavList = ({ links }: INavListProps) => (
   <VStack as="nav" gap="2em" pr="4" align='flex-start'>
-    {titles.map((itemTitle, index) => (
+    {links.map((link: any, index: number) => (
       <Box key={index}>
-        <LinkItem title={itemTitle} href={`${itemTitle}`} />
+        <LinkItem title={link.title} href={`${link.href}`} />
       </Box>
     ))}
   </VStack>

@@ -1,17 +1,16 @@
-type SkillItem = {
-  title: string,
-  img: string | object,
+export interface Skill  {
+  name: string,
+  title?: string
 }
 
-type Project = {
+export interface Project  {
   id: number,
-  title: string,
+  year: number,
+  title: string
+  projectContext: string,
   description: string
-}
-
-type Content = {
-  about: string,
-  skills: SkillItem[],
-  projects: Project[]
+  stack: string [],
+  repositories: { title: string, href: string }[],
+  projectLink: string
 }
 

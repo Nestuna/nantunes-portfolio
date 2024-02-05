@@ -1,5 +1,5 @@
 import { Box, Flex, VStack, Link, Heading, Text } from '@chakra-ui/react'
-import { Title } from './atoms/title'
+import { Title } from '../atoms/title'
 
 export const MainTitle = () => (
   <VStack gap='1em' align='flex-start'>

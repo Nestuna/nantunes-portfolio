@@ -1,9 +1,9 @@
 import {  Stack, Text } from "@chakra-ui/react"
-import { about } from "../content"
-const About = () => (
-  <Stack px='2em'>
+
+const About = ({ text }: { text: string }) => (
+  <Stack py='2em'>
     <Text>
-        { about }
+        { text }
     </Text>
   </Stack>
 )
