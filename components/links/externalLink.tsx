@@ -2,7 +2,7 @@
 
 import { HStack } from '@chakra-ui/react'
 import React from 'react'
-import { LinkItem } from '../atoms/linkItem'
+import { LinkItem } from './linkItem'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { ILink } from '@/app/types'
 

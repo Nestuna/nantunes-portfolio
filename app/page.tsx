@@ -2,7 +2,8 @@ import About from '@/components/about'
 import { SlideFade, Stack  } from '@chakra-ui/react'
 import Projects from '../components/projects'
 
-import { about, projects } from './content'
+import { about, projects, experiences } from './content'
+import Resume from '@/components/resume'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Stack h="75vh">
         <About text={about}/>
         <Projects projects={projects} />
+        <Resume experiences={experiences}/>
       </Stack>
     </SlideFade>
   )

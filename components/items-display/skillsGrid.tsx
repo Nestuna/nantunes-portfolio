@@ -1,7 +1,7 @@
 'use client'
 
 import { ScaleFade, Wrap, WrapItem, useBoolean } from '@chakra-ui/react'
-import { BadgeCard } from '../atoms/badgeCard'
+import { BadgeCard } from '../cards/badgeCard'
 import { Skill } from '@/app/types'
 import { useEffect, useState } from 'react'
 
@@ -14,8 +14,6 @@ export const SkillsGrid = ({ skills }: SkillsGridProps) => {
   useEffect(() => {
     setTimeout(() => setStart(true), 1000)
   }, [])
-
-
 
 
   return (

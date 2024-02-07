@@ -11,8 +11,8 @@ interface ILinkItemProps {
 }
 export const NavLinkItem = ({ title, href }: ILinkItemProps) => {
   return (
-    <LinkItem href={href} color='secondary'>
-      <Text fontSize='lg'>{title}</Text>
+    <LinkItem href={href} color='#ef4e7b'>
+      <Text fontSize='lg'>| {title} </Text>
     </LinkItem>
   )
 }
