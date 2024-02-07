@@ -1,9 +1,9 @@
 import { Flex, ScaleFade } from '@chakra-ui/react'
 import React from 'react'
 
-export const FadeContainer = ({children}: { children: React.ReactNode}) => {
-  return (
-    <ScaleFade
+interface FadeContainerProps { children: React.ReactNode }
+export const FadeContainer = ({ children }: FadeContainerProps) => (
+  <ScaleFade
     in={true}
     transition={{ enter: { duration: '1', ease: 'easeOut' } }}
     initialScale={0.8}>
@@ -20,7 +20,5 @@ export const FadeContainer = ({children}: { children: React.ReactNode}) => {
       </Flex>
     </Flex>
   </ScaleFade>
-
-  )
-}
+)
 

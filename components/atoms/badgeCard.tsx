@@ -2,12 +2,13 @@ import { Card, CardBody, Tooltip } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
-export const BadgeCard = ({ img, title }: Record<any, string>) => (
-    <Tooltip label={title.toUpperCase()}>
-      <Card bgColor="foreground" borderRadius='30px'>
-        <CardBody>
-          <Image src={img} alt={title} width="50" height="50" />
-        </CardBody>
-      </Card>
-    </Tooltip>
-  )
+interface BadgeCardProps {
+  img: string
+  title: string
+  variant?: 'elevated' | 'outline' | 'filled'
+}
+export const BadgeCard = ({ img, title, variant }: BadgeCardProps) => (
+  <Tooltip label={title.toUpperCase()}>
+    <Image src={img} alt={title} width="60" height="60" />
+  </Tooltip>
+)

@@ -1,11 +1,12 @@
 'use client'
 
-import { VStack } from '@chakra-ui/react'
+import { Box, Flex, VStack } from '@chakra-ui/react'
 
 import { MainTitle } from '@/components/molecules/mainTitle'
 import { NavList } from '@/components/molecules/navList'
 import { SkillsGrid } from '@/components/molecules/skillsGrid'
 import { skills } from './content'
+import { ProfileLinks } from '@/components/molecules/profileLinks'
 
 export const Header = () => {
   const navTitles = [
@@ -13,10 +14,10 @@ export const Header = () => {
     { title: 'projects', href: '#projects' },
   ]
 
+
   return (
-    <VStack gap="4em" color={'whitesmoke'} align="flex-start">
+    <VStack gap="5em" color={'whitesmoke'} align="center">
       <MainTitle />
-      <NavList links={navTitles} />
       <SkillsGrid skills={skills} />
     </VStack>
   )

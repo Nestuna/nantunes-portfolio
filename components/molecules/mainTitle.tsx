@@ -1,12 +1,22 @@
-import { Box, Flex, VStack, Link, Heading, Text } from '@chakra-ui/react'
+import { Box, Flex, VStack, Link, Heading, Text, Stack } from '@chakra-ui/react'
 import { Title } from '../atoms/title'
+import { ProfileLinks } from './profileLinks'
 
-export const MainTitle = () => (
-  <VStack gap='1em' align='flex-start'>
-    <Heading as="h1" size='2xl' color='primary'>Nicolas Antunes</Heading>
-    <Title text={'Fullstack Developper'}/>
-    <Text>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </Text>
-  </VStack>
-)
+export const MainTitle = () => {
+  const profileLinks = [
+    { type: 'mail', href: '' },
+    { type: 'phone', href: '' },
+    { type: 'linkedin', href: '' },
+  ]
+  return (
+    <VStack gap="2em">
+      <VStack className='main-title'>
+        <Heading as="h1" size="2xl" >
+          Nicolas Antunes
+        </Heading>
+        <Title>Fullstack Developper</Title>
+      </VStack>
+      <ProfileLinks links={profileLinks} />
+    </VStack>
+  )
+}

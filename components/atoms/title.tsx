@@ -1,5 +1,6 @@
 import { Heading } from '@chakra-ui/react'
+import React from 'react'
 
-export const Title = ({ text }: { text: string }) => (
-  <Heading as='h2' size='lg' color='primary'>{text}</Heading>
+export const Title = ({ children }: { children: React.ReactNode }) => (
+  <Heading as='h2' size='lg'>{children}</Heading>
 )

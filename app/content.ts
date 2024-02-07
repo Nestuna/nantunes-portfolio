@@ -13,63 +13,91 @@ export const skills: Skill[] = [
   { name: 'jest' },
   { name: 'webdriverio', title: 'Webdriver I/O' },
   { name: 'python' },
+  { name: 'pytest' },
   { name: 'django' },
   { name: 'gitlabci', title: 'Gitlab CI' },
-  { name: 'docker' }
+  { name: 'docker' },
 ]
 
 export const projects: Project[] = [
   {
-    id: 2,
-    year: 2024,
-    title: 'Refonte UI de la navigation de Nudgis',
-    projectContext: 'Projet professionnel chez Ubicast',
-    description: 'Design et refonte UI / UX  intégrale de la navigation de Nudgis',
-    stack: ['Angular', 'Material', 'Jest', 'Webdriver I/O', 'Django', 'Docker', ],
-    repositories: [],
-    projectLink: ''
-  },
-  {
-    id: 5,
-    year: 2024,
-    title: 'JukeBoxify (En projet)',
-    projectContext: 'Projet personnel',
-    description: 'Permettre à des personnes d’ajouter des morceaux à une liste de lecture Spotify en cours.',
-    stack: ['React', 'Next', 'MUI', 'PWA', 'Fast API', 'MongoDB'],
-    repositories: [],
-    projectLink: ''
-  },
-  {
-    id: 1,
-    year: 2024,
+    year: '2024',
     title: 'Portfolio ',
     projectContext: 'Projet personnel',
-    description: 'Site vitrine pour exposer mes compétences mais aussi pour m’entraîner sur React et Next',
+    description:
+      'Site vitrine pour exposer mes compétences mais aussi pour m’entraîner sur React et Next. J\'ai également pour projet d\'intégrer une interface admin pour ajouter du contenu.',
     stack: ['React', 'Next', 'Chakra UI'],
-    repositories: [{ title: 'Web site repository', href: 'https://github.com/Nestuna/nantunes-portfolio'}],
-    projectLink: ''
+    repositories: [
+      {
+        title: 'Web site repository',
+        href: 'https://github.com/Nestuna/nantunes-portfolio',
+      },
+    ],
+    projectLink: '',
   },
   {
-    id: 3,
-    year: 2023,
+    year: '2022-2023',
+    title: "Refonte UI / UX d'une plateforme vidéo",
+    projectContext: 'Projet professionnel chez Ubicast',
+    description: `Design et developpement de la refonte UI / UX  intégrale de la navigation de Nudgis.
+       Nudgis est une solution de plateforme video prive d\'e-learning a destination d\'institutions du superieur ou organisation publique ou privée.
+       Cela a été l\'occasion de m\'initier á Angular, mais aussi la construction d\'un projet de A á Z. J\'ai du parfois modifier l\'API, et apprendre sa logique. Egalement j\'ai pu monter en competence en TDD, en construisant des tests unitaires et end-to-end.
+      `,
+    stack: ['Angular', 'Material', 'Jest', 'Webdriver I/O', 'Django', 'Docker'],
+    repositories: [],
+    projectLink: '',
+  },
+  {
+    year: '2020-2021',
+    title: "Migration automatisée de contenu d'une plateforme vidéo (Nudgis)",
+    projectContext: 'Projet professionnel chez Ubicast',
+    description:
+      "Migration automatisée depuis une platefome vidéo concurrente vers la plateforme Nudgis, afin que les clients aient tous les contenu presentable lors du passage á la solution d'Ubicast",
+    stack: ['Angular', 'Material', 'Jest', 'Webdriver I/O', 'Django', 'Docker'],
+    repositories: [],
+    projectLink: '',
+  },
+  {
+    year: '2023',
     title: 'Cuistou',
     projectContext: 'Projet universitaire autonome en groupe',
-    description: 'Proposer des recettes en accord avec les fruits et légumes de saisons.',
+    description:
+      'Proposer des recettes en accord avec les fruits et légumes de saisons.',
     stack: ['React', 'Next', 'MUI', 'Express.js', 'MongoDB'],
-    repositories: [{ title: 'Client app repository', href: 'https://github.com/Nestuna/cuistou'}],
-    projectLink: ''
+    repositories: [
+      {
+        title: 'Client app repository',
+        href: 'https://github.com/Nestuna/cuistou',
+      },
+    ],
+    projectLink: '',
   },
   {
-    id: 4,
-    year: 2020,
+    year: '2020',
     title: 'Butterfly - Mobile App',
     projectContext: 'Projet universitaire en duo',
-    description: 'Messagerie éphémère et privée.',
+    description: 'Messagerie éphémère et privée. Le but est pouvoir créer des conversations privée joignable seulement via un ID unique, et qui soit supprimée au bout d\'un temps donnée. Le temps peut etre configurée',
     stack: ['React Native', 'Docker', 'Django Rest', 'MySQL'],
     repositories: [
-      { title: 'Mobile app repository', href: 'https://github.com/Nestuna/butterfly_project_front/tree/master'},
-      { title: 'Server repository', href: 'https://github.com/Nestuna/butterfly-server-app'}
+      {
+        title: 'Mobile app repository',
+        href: 'https://github.com/Nestuna/butterfly_project_front/tree/master',
+      },
+      {
+        title: 'Server repository',
+        href: 'https://github.com/Nestuna/butterfly-server-app',
+      },
     ],
-    projectLink: ''
+    projectLink: '',
+  },
+  {
+    year: '2024',
+    title: '[ En projet ] JukeBoxify',
+    projectContext: 'Projet personnel',
+    description: `Permettre à des personnes d’ajouter des morceaux à une liste de lecture Spotify maitre en cours.
+       Il suffirait d\avoir soit un lien, soit un QR Code. Le compte maitre peut configurer les modalites d\ajout`,
+    stack: ['React', 'Next', 'MUI', 'PWA', 'Express.js', 'Prisma', 'MongoDB'],
+    repositories: [],
+    projectLink: '',
   },
 ]

@@ -5,13 +5,15 @@ import { Providers } from './providers'
 import {
   Box,
   Container,
+  Divider,
   Flex,
   ScaleFade,
   SlideFade,
   VStack,
 } from '@chakra-ui/react'
 import { Header } from '@/app/header'
-import { FadeContainer } from '@/components/fadeContainer'
+import { FadeContainer } from '@/components/container'
+import { NavList } from '@/components/molecules/navList'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +27,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const navTitles = [
+    { title: 'about', href: '#about' },
+    { title: 'projects', href: '#projects' },
+    { title: 'resume', href: '#resume' },
+  ]
+
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -46,19 +56,28 @@ export default function RootLayout({
                   <Header />
                 </SlideFade>
               </Box>
-              <Box
-                id="main-content"
-                flex="3"
-                h="90vh"
-                p="1.5em"
-                overflowY="auto"
-                overflowX="hidden"
-                sx={{
-                  'mask-image':
-                    'linear-gradient(to bottom, black calc(100% - 48px), transparent 100%)',
-                }}>
-                {children}
+              <VStack flex='3'>
+                <NavList links={navTitles}/>
+                <Divider sx={{ 'border-color': 'var(--foreground) !important'}}/>
+                <Box
+                  id="main-content"
+                  flex="3"
+                  h="90vh"
+                  p="1.5em"
+                  overflowY="auto"
+                  overflowX="hidden"
+                  sx={{
+                    'mask-image':
+                      `linear-gradient(
+                        to bottom,
+                        black calc(100% - 48px),
+                        transparent 100%
+                      )`
+                  }}>
+                  {children}
               </Box>
+              </VStack>
+
             </FadeContainer>
           </Container>
         </Providers>

@@ -1,11 +1,11 @@
 export interface Skill  {
   name: string,
-  title?: string
+  title?: string,
+  level?: 1 | 2 | 3
 }
 
 export interface Project  {
-  id: number,
-  year: number,
+  year: string,
   title: string
   projectContext: string,
   description: string
@@ -14,3 +14,7 @@ export interface Project  {
   projectLink: string
 }
 
+export interface ILink {
+  title: string,
+  href: string
+}

@@ -1,41 +1,21 @@
-import { Box, Flex, Link, Slide } from '@chakra-ui/react'
+import { Box, Flex, Link, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
+import React from 'react'
 
-interface ILinkItemProps {
-  title: string
-  href: string
+interface LinkItemProps {
+  children: React.ReactNode
+  href: string,
+  color?: string
 }
-export const LinkItem = ({ title, href }: ILinkItemProps) => {
-  const path = usePathname()
-  const active = path.slice(1) === href
-
+export const LinkItem = ({ children, href, color }: LinkItemProps) => {
   return (
-    <Flex
-      gap="1em"
-      color={active ? 'var(--primary)' : ''}
-      _hover={{ color: 'var(--primary)' }}>
-      <Box flex="1">_________</Box>
-      <Link
-        as={NextLink}
-        href={href}
-        flex="1"
-        sx={ active ?
-          {
-            color: 'var(--primary)',
-            padding: '0 0 0 2em',
-          } :
-          {
-          transition: 'all .5s ease-in-out',
-          padding: '0 0 0 0',
-        }}
-        _hover={{
-          color: 'var(--primary)',
-          transition: 'all .5s ease-in-out',
-          padding: '0 0 0 2em',
-        }}>
-        {title}
-      </Link>
-    </Flex>
+    <Link
+      as={NextLink}
+      href={href}
+      color={ color ? color : 'primary.700' }
+      _hover={{ opacity: 0.7 }}>
+      <Text as='b'>{ children }</Text>
+    </Link>
   )
 }
