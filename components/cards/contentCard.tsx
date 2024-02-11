@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Box,
   Card,
   CardBody,
   HStack,
@@ -8,7 +7,6 @@ import {
   Stack,
   Tag,
   TagLabel,
-  Text,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'

@@ -14,8 +14,7 @@ export const FadeContainer = ({ children, ...props }: any) => (
       borderRadius={{base: 0, lg: "5%"}}
       maxW={{ lg: '90vw', xl: '75vw'}}
       minH="100vh"
-      color="whitesmoke"
-      opacity={'.9'}>
+      color="whitesmoke">
       <Flex
         background="var(--background)"
         p="1.5em"
