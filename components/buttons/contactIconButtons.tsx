@@ -35,13 +35,14 @@ export const ContactIconButtons = ({ links }: ContactIconButtonsProps) => {
                 <PopoverContent bg='transparent' borderColor='transparent' w='fit-content'>
                   <PopoverArrow bg='transparent' />
                   <PopoverBody display='flex' alignItems='center' w='fit-content'>
-                    <Button colorScheme='orange' mx='auto'><LinkItem href={link.href} color='whitesmoke'>{link.text}</LinkItem></Button>
+                    <Button colorScheme='orange' mx='auto'>
+                      <LinkItem href={link.href} color='whitesmoke'>{link.text}</LinkItem></Button>
                   </PopoverBody>
                 </PopoverContent>
               </Popover>
             )
           } else {
-            return <LinkItem href={link.href}>{getIcon('linkedin')}</LinkItem>
+            return <LinkItem href={link.href} key={index}>{getIcon('linkedin')}</LinkItem>
           }
         })
       }

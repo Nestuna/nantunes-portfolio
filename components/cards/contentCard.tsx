@@ -43,9 +43,8 @@ export const ContentCard = ({ content, variant, color }: ContentCardProps) => {
           </MarkdownText>
           <Wrap>
             {content.tags.map((label: string, index: number) => (
-              <WrapItem>
+              <WrapItem key={index}>
                 <Tag
-                  key={index}
                   colorScheme={color?.includes('accent') ? 'accent' : 'orange'}
                   borderRadius="full"
                   variant="solid">
