@@ -12,10 +12,11 @@ export const SideHeader = () => {
     { title: 'about', href: '#about' },
     { title: 'projects', href: '#projects' },
   ]
-  const profileLinks = [
+  const contacts = [
     { type: 'mail', href: 'mailto:nicolasantunespereira@gmail.com', text: 'nicolasantunespereira@gmail.com' },
     { type: 'phone', href: 'tel:0612821661', text: '06 12 82 16 61' },
-    { type: 'linkedin', href: 'https://linkedin.com/in/n-antunes/'},
+    { type: 'linkedin', href: 'https://linkedin.com/in/n-antunes/', directLink: true},
+    { type: 'github', href: 'https://github.com/Nestuna/', directLink: true},
   ]
 
   return (
@@ -27,7 +28,7 @@ export const SideHeader = () => {
           </Heading>
           <Title textAlign='center'>Développeur Fullstack</Title>
         </VStack>
-        <ContactIconButtons links={profileLinks} />
+        <ContactIconButtons links={contacts} />
       </VStack>
       <SkillsGrid skills={skills} />
     </VStack>

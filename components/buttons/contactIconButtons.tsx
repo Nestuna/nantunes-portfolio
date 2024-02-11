@@ -6,7 +6,7 @@ import { LinkItem } from '../links/linkItem'
 
 
 interface ContactIconButtonsProps {
-  links: { type: string, href: string, text?: string }[]
+  links: { type: string, href: string, text?: string, directLink?: boolean }[]
 }
 
 export const ContactIconButtons = ({ links }: ContactIconButtonsProps) => {
@@ -20,13 +20,17 @@ export const ContactIconButtons = ({ links }: ContactIconButtonsProps) => {
         return <PhoneIcon boxSize={size}/>
       case 'linkedin':
         return <Image src='/images/linkedin.webp' alt='linkedin' width={size} height='50'/>
+      case 'github':
+        return <Image src='/images/github.png' alt='github' width={size} height='50'/>
     }
   }
   return (
     <HStack gap='2em' justify='center'>
       {
         links.map((link, index) => {
-          if (link.type !== 'linkedin') {
+          if (link.directLink) {
+            return <LinkItem href={link.href} key={index}>{getIcon(link.type)}</LinkItem>
+          } else {
             return (
               <Popover key={index}>
                 <PopoverTrigger>
@@ -41,8 +45,6 @@ export const ContactIconButtons = ({ links }: ContactIconButtonsProps) => {
                 </PopoverContent>
               </Popover>
             )
-          } else {
-            return <LinkItem href={link.href} key={index}>{getIcon('linkedin')}</LinkItem>
           }
         })
       }
