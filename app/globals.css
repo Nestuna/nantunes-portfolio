@@ -11,9 +11,7 @@
     #f79533,
     #f37055,
     #ef4e7b,
-    #a166ab7e,
-    #de8faf,
-    #745db3,
+    #de8faf
   );
 }
 
@@ -42,11 +40,19 @@ body {
 
 #main-content::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: var(--foreground);
+  background-color: #4d475d;
 }
 
-.main-title {
+.text-gradient {
   background: -webkit-linear-gradient(130deg, #a166ab, #ef4e7b, #ffaa6b 75%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+nav.text-gradient {
+  -webkit-text-fill-color: #a166ab32;
+}
+
+nav.text-gradient > .chakra-link:hover {
+  -webkit-text-fill-color: var(--primary);
 }

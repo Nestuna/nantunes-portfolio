@@ -1,34 +1,39 @@
-'use client'
-
-import { ScaleFade, Wrap, WrapItem, useBoolean } from '@chakra-ui/react'
-import { BadgeCard } from '../cards/badgeCard'
+import {
+  ScaleFade,
+  Tooltip,
+  Wrap,
+  WrapItem,
+  useBoolean,
+} from '@chakra-ui/react'
 import { Skill } from '@/app/types'
-import { useEffect, useState } from 'react'
+import { Image } from '@chakra-ui/react'
 
 interface SkillsGridProps {
   skills: Skill[]
 }
 export const SkillsGrid = ({ skills }: SkillsGridProps) => {
-  const [start, setStart] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => setStart(true), 1000)
-  }, [])
-
-
   return (
-    <Wrap id="skills" spacing="3em" py="1em" maxW='400px' justify='space-evenly' >
+    <Wrap
+      id="skills"
+      spacing="3em"
+      py="1em"
+      maxW="400px"
+      justify="space-evenly">
       {skills.map((skill: Skill, index: number) => {
+        const title = skill.title || skill.name
         return (
           <WrapItem key={index}>
             <ScaleFade
-              in={start}
+              in={true}
               initialScale={0.1}
               transition={{ enter: { duration: 0.5, delay: index / 6 } }}>
-              <BadgeCard
-                title={skill.title || skill.name}
-                img={`/images/${skill.name}.png`}
-              />
+              <Tooltip label={title.toUpperCase()}>
+                <Image
+                  src={`/images/${skill.name}.png`}
+                  alt={title}
+                  boxSize={{ base: '40px', lg: '40px', '2xl': '50px' }}
+                />
+              </Tooltip>
             </ScaleFade>
           </WrapItem>
         )

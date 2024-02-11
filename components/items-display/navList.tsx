@@ -8,11 +8,9 @@ interface INavListProps {
   }[]
 }
 export const NavList = ({ links }: INavListProps) => (
-  <HStack as="nav" gap="2em" pr="4">
+  <HStack as="nav" className='text-gradient' gap="2em" pr="4">
     {links.map((link: any, index: number) => (
-      <Box key={index}>
-        <NavLinkItem title={link.title} href={`${link.href}`} />
-      </Box>
+      <NavLinkItem title={link.title} href={`${link.href}`} key={index} />
     ))}
   </HStack>
 )

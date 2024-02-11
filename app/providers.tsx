@@ -2,6 +2,7 @@
 'use client'
 
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { withProse } from '@nikolovlazar/chakra-ui-prose'
 
 const theme = extendTheme({
   colors: {
@@ -21,9 +22,8 @@ const theme = extendTheme({
       500: '#c72b57'
     },
     foreground: '#292436',
-
-  }
-})
+  },
+},  withProse())
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>

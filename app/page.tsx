@@ -1,9 +1,10 @@
-import About from '@/components/about'
 import { SlideFade, Stack  } from '@chakra-ui/react'
-import Projects from '../components/projects'
+
+import Projects from '@/components/projects'
+import About from '@/components/about'
+import Resume from '@/components/resume'
 
 import { about, projects, experiences } from './content'
-import Resume from '@/components/resume'
 
 
 const Home = () => {
@@ -11,10 +12,10 @@ const Home = () => {
     <SlideFade
       in={true}
       transition={{
-        enter: { duration: '1.5', ease: 'easeOut' },
+        enter: { duration: '1.5', ease: 'easeOut', delay: 1 },
       }}
       offsetY="15vw">
-      <Stack h="75vh">
+      <Stack h={{base: 'auto', lg :"75vh"}}>
         <About text={about}/>
         <Projects projects={projects} />
         <Resume experiences={experiences}/>

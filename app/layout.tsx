@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import { Box, Container, Divider, SlideFade, VStack } from '@chakra-ui/react'
+import { Box, Divider, SlideFade, VStack } from '@chakra-ui/react'
 import { SideHeader } from '@/components/side-header'
 import { FadeContainer } from '@/components/container'
 import { NavList } from '@/components/items-display/navList'
+import { GoUpIconButton } from '@/components/buttons/goUpIconButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,47 +30,45 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Container
-            maxW="75vw"
-            minH="100vh"
-            p="1em"
-            color="whitesmoke"
-            opacity={'.9'}>
-            <FadeContainer>
-              <Box flex="2" overflow="hidden" mt='5vh'>
-                <SlideFade
-                  in={true}
-                  transition={{
-                    enter: { duration: '1.5', ease: 'easeOut' },
-                  }}
-                  offsetY="10vh">
-                  <SideHeader />
-                </SlideFade>
+          <FadeContainer>
+            <Box
+              id="home"
+              flex={{ base: 'auto', lg: '1' }}
+              overflow="hidden"
+              mt="5vh">
+              <SlideFade
+                in={true}
+                transition={{
+                  enter: { duration: '1.5', ease: 'easeOut' },
+                }}
+                offsetY="10vh">
+                <SideHeader />
+              </SlideFade>
+            </Box>
+            <VStack flex="3">
+              <NavList links={navTitles} />
+              <Divider sx={{ borderColor: 'var(--foreground) !important' }} />
+              <Box
+                id="main-content"
+                flex="3"
+                h={{ base: 'auto', lg: '90vh' }}
+                p="1.5em"
+                overflowY={{ base: 'unset', lg: 'auto' }}
+                overflowX={{ base: 'unset', lg: 'hidden' }}
+                sx={{
+                  maskImage: `linear-gradient(
+                      to bottom,
+                      black calc(100% - 48px),
+                      transparent 100%
+                    )`,
+                }}>
+                {children}
               </Box>
-              <VStack flex="3">
-                <NavList links={navTitles} />
-                <Divider
-                  sx={{ 'border-color': 'var(--foreground) !important' }}
-                />
-                <Box
-                  id="main-content"
-                  flex="3"
-                  h="90vh"
-                  p="1.5em"
-                  overflowY="auto"
-                  overflowX="hidden"
-                  sx={{
-                    'mask-image': `linear-gradient(
-                        to bottom,
-                        black calc(100% - 48px),
-                        transparent 100%
-                      )`,
-                  }}>
-                  {children}
-                </Box>
-              </VStack>
-            </FadeContainer>
-          </Container>
+              <Box display={{ lg: 'none' }} position="fixed" bottom='5' right='1.5'>
+                <GoUpIconButton />
+              </Box>
+            </VStack>
+          </FadeContainer>
         </Providers>
       </body>
     </html>

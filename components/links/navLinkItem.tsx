@@ -1,8 +1,5 @@
 'use client'
-import { Box, Flex, Link, Slide, Text } from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
+import { Text } from '@chakra-ui/react'
 import { LinkItem } from './linkItem'
 
 interface ILinkItemProps {
@@ -11,8 +8,8 @@ interface ILinkItemProps {
 }
 export const NavLinkItem = ({ title, href }: ILinkItemProps) => {
   return (
-    <LinkItem href={href} color='#ef4e7b'>
-      <Text fontSize='lg'>| {title} </Text>
+    <LinkItem href={href}>
+      <Text fontSize={{ base: 'sm', sm: 'lg'}}>| {title} </Text>
     </LinkItem>
   )
 }

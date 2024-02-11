@@ -10,7 +10,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const contentObj = {
     title: experience.title,
     subtitle: experience.organisation,
-    description: experience.description || [],
+    description: experience.description || '',
     tags: experience.skills,
   }
 

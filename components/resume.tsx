@@ -2,8 +2,8 @@ import { Flex, Stack } from '@chakra-ui/react'
 
 import { Experience } from '@/app/types'
 import { ExperienceCard } from './cards/experienceCard'
-import { Title } from './titles/title'
-import { SubTitle } from './titles/subTitle'
+import { Title } from '@/components/text/title'
+import { SubTitle } from '@/components/text/subTitle'
 
 type ExperienceProps = { experiences: Record<'pro' | 'training', Experience[]> }
 export const Resume = ({ experiences }: ExperienceProps) => {

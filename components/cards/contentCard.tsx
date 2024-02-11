@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Box,
   Card,
   CardBody,
   HStack,
@@ -8,9 +9,14 @@ import {
   Tag,
   TagLabel,
   Text,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react'
+import { marked } from 'marked'
+
 import { ExternalLink } from '../links/externalLink'
-import { CardContent, ILink } from '@/app/types'
+import { CardContent  } from '@/app/types'
+import { MarkdownText } from '../text/markdownText'
 
 interface ContentCardProps {
   content: CardContent
@@ -18,11 +24,7 @@ interface ContentCardProps {
   color?: string
 }
 
-export const ContentCard = ({
-  content,
-  variant,
-  color,
-}: ContentCardProps) => {
+export const ContentCard = ({ content, variant, color }: ContentCardProps) => {
   return (
     <Card
       variant={variant}
@@ -36,23 +38,22 @@ export const ContentCard = ({
             {content.title}
           </Heading>
           <Heading size="sm">{content.subtitle}</Heading>
-          {
-             content.description.map((line: string, index: number) => (
-                  <Text key={index}>{line}</Text>
-                ))
-            }
-          }
-          <HStack>
+          <MarkdownText>
+            {content.description}
+          </MarkdownText>
+          <Wrap>
             {content.tags.map((label: string, index: number) => (
-              <Tag
-                key={index}
-                colorScheme={color?.includes('accent') ? 'accent': 'orange'}
-                borderRadius="full"
-                variant="solid">
-                <TagLabel>{label}</TagLabel>
-              </Tag>
+              <WrapItem>
+                <Tag
+                  key={index}
+                  colorScheme={color?.includes('accent') ? 'accent' : 'orange'}
+                  borderRadius="full"
+                  variant="solid">
+                  <TagLabel>{label}</TagLabel>
+                </Tag>
+              </WrapItem>
             ))}
-          </HStack>
+          </Wrap>
           <HStack>
             {content.links?.map((link, index) => (
               <ExternalLink title={link.title} href={link.href} key={index} />

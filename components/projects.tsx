@@ -2,7 +2,7 @@ import { Heading, Stack } from '@chakra-ui/react'
 
 import { Project } from '@/app/types'
 import { ProjectCard } from '@/components/cards/projectCard'
-import { Title } from './titles/title'
+import { Title } from '@/components/text/title'
 
 type ProjectsProps = { projects: Project[] }
 export const Projects = ({ projects }: ProjectsProps) => {

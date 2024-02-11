@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Project } from '@/app/types'
-import { ContentCard } from './contentCard'
+import { ContentCard } from '@/components/cards/contentCard'
 
 interface ProjectCardProps {
   project: Project

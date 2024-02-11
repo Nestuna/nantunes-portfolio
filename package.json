@@ -14,7 +14,13 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@nikolovlazar/chakra-ui-prose": "^1.2.1",
+    "@orrisroot/react-html-parser": "^2.1.2",
+    "dompurify": "^3.0.8",
+    "domsanitizer": "^0.2.3",
     "framer-motion": "^10.18.0",
+    "html-react-parser": "^5.1.2",
+    "marked": "^12.0.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -22,6 +28,7 @@
     "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
