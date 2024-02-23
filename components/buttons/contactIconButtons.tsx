@@ -1,3 +1,5 @@
+'use client'
+
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons'
 import Image from 'next/image'
 import React from 'react'

@@ -9,9 +9,8 @@ export const GoUpIconButton = () => {
   return (
     <LinkItem href='/#home'>
       <IconButton
-        variant='outline'
         isRound={true}
-        colorScheme='orange'
+        colorScheme='purple'
         aria-label='Go up'
         icon={<ArrowUpIcon />}
       />

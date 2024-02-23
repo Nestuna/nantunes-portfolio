@@ -2,11 +2,14 @@ import React from 'react'
 import {
   Card,
   CardBody,
+  Flex,
   HStack,
   Heading,
+  Spacer,
   Stack,
   Tag,
   TagLabel,
+  Text,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
@@ -32,9 +35,13 @@ export const ContentCard = ({ content, variant, color }: ContentCardProps) => {
       color="whitesmoke">
       <CardBody>
         <Stack gap="1em">
-          <Heading size="md" color={`${color || 'primary.500'}`}>
-            {content.title}
-          </Heading>
+          <Flex direction='row'>
+            <Heading size="md" color={`${color || 'primary.500'}`}>
+              {content.title}
+            </Heading>
+            <Spacer />
+            <Text>{ content.year }</Text>
+          </Flex>
           <Heading size="sm">{content.subtitle}</Heading>
           <MarkdownText>
             {content.description}

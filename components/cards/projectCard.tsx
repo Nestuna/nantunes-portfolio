@@ -9,6 +9,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const contentObj = {
     title: project.title,
+    year: project.year,
     subtitle: project.projectContext,
     description: project.description,
     tags: project.stack,

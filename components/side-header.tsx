@@ -1,6 +1,4 @@
-'use client'
-
-import { HStack, Heading, VStack } from '@chakra-ui/react'
+import { Heading, VStack } from '@chakra-ui/react'
 
 import { SkillsGrid } from '@/components/items-display/skillsGrid'
 import { skills } from '../app/content'

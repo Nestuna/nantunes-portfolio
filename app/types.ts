@@ -24,6 +24,7 @@ export interface Experience {
 
 export interface CardContent {
   title: string,
+  year: string,
   subtitle: string,
   description: string,
   tags: string[],

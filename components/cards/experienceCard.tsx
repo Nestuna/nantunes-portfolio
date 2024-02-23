@@ -9,6 +9,7 @@ interface ExperienceCardProps {
 export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const contentObj = {
     title: experience.title,
+    year: experience.year,
     subtitle: experience.organisation,
     description: experience.description || '',
     tags: experience.skills,

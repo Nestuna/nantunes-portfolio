@@ -118,7 +118,7 @@ export const projects: Project[] = [
 export const experiences: Record<'pro' | 'training', Experience[]> = {
   pro: [
     {
-      year: '2020 - 2023 (3 ans)',
+      year: '2020 - 2023',
       title: 'Développeur Fullstack Apprenti',
       organisation: 'Ubicast',
       // each item of array mark a line. So `,` is like a breakline
