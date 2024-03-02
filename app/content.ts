@@ -1,8 +1,11 @@
 import { Experience, Project, Skill } from './types'
 
 export const about = `
-Auparavant professionnel dans le médico-social, je me suis vite intéressé à l’informatique en autodidacte.
-A la recherche de nouveaux défis, j’ai entrepris de reprendre des études en informatique qui aboutit á l’obtention de mon titre. Je suis donc maintenant un développeur avec des soft skills développés de par mon background, et de bonnes compétences techniques acquis lors de mon expérience en alternance.
+  Actuellement à la recherche d'un poste en développement web. J'ai une forte appétence pour la construction d'interfaces utilisateurs,
+  dans tous ses aspects; je sais aussi construire des structures back-end solides.
+  Mes soft-skills sont assez avancées, du à mes expériences passées dans d'autres domaines,
+  et j'ai pu développer des compétences techniques solides lors de mes 3 ans d'alternance.
+  Communication et efficacité sont mes crédos.
 `
 
 // image name must correspond to skill name : /images/[skill].png
@@ -126,7 +129,7 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       'Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
       \n**Missions** :  \n \
       \n-   Design et refonte UI / UX  intégrale de la navigation de Nudgis  \n \
-      \n-   Automatisation de la migration du contenu vidéo d\’une plateforme externe  vers Nudgis. \n \
+      \n-   Automatisation de la migration du contenu vidéo d\’une plateforme externe  vers Nudgis. \n \n \
       Remote Partiel',
       skills: [
         'Angular',
@@ -147,7 +150,7 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       'Participation à l\'élaboration du MVP (prototype) de l\'application mobile EKTOR: Application de prévision des ventes et des besoins RH pour restaurateurs. \
       \n **Mission** : \
        \n- Construction et architectures de certaines vues mobiles \n \
-       \n- Developpement d’une partie de l’API Rest \n \
+       \n- Developpement d’une partie de l’API Rest \n \n \
        Full Remote',
       skills: ['React Native', 'Django Rest', 'Développement Mobile'],
     },

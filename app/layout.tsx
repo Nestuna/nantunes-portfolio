@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const navTitles = [
-    { title: 'about', href: '#about' },
-    { title: 'projects', href: '#projects' },
-    { title: 'resume', href: '#resume' },
+    { title: 'á propos', href: '#about' },
+    { title: 'projets', href: '#projects' },
+    { title: 'parcours', href: '#resume' },
   ]
 
   return (
