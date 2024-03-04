@@ -2,9 +2,9 @@ import { Experience, Project, Skill } from './types'
 
 export const about = `
   Actuellement à la recherche d'un poste en développement web. J'ai une forte appétence pour la construction d'interfaces utilisateurs,
-  dans tous ses aspects; je sais aussi construire des structures back-end solides.
+  dans tous ses aspects; mais je sais aussi construire des structures back-end solides.
   Mes soft-skills sont assez avancées, du à mes expériences passées dans d'autres domaines,
-  et j'ai pu développer des compétences techniques solides lors de mes 3 ans d'alternance.
+  et j'ai pu développer des compétences techniques solides lors de mes 3 ans d'alternance. \n
   Communication et efficacité sont mes crédos.
 `
 
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     projectContext: 'Projet personnel',
     description:
       "Site vitrine pour exposer mes compétences mais aussi pour me ré-initier sur les dernieres versions de **React** et **Next**. J'ai pu notament m'inspirer de l'*atomic design pattern* pour architecturer mon projet, tout en l'adaptant à mon style de code. \
-      \n \nJ'ai également pour projet d'intégrer une interface admin pour ajouter du contenu dynamiquement. J'ai déja préparé le terrain avec l'integration de *markdown*",
+      \n \nJ'ai également pour projet d'intégrer une interface admin pour ajouter du contenu dynamiquement. J'ai déja préparé le terrain avec l'integration de *markdown*.",
     stack: ['React', 'Next', 'Chakra UI'],
     repositories: [
       {
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     projectContext: 'Projet professionnel chez Ubicast (alternance)',
     description:
       "**Design et developpement** de la refonte UI / UX  intégrale de la navigation de *Nudgis*. \
-       \n *Nudgis* est une solution de plateforme vidéo prive d\'e-learning a destination d\'institutions du superieur ou organisation publique ou privée. \n \
+       \n *Nudgis* est une solution de plateforme vidéo prive d\'e-learning à destination d\'institutions du superieur ou organisation publique ou privée. \n \
        \n \nCela a été l\'occasion de m\'initier à **Angular**, mais aussi à la **construction d\'un projet de A à Z** (y compris la démarche design UI / UX). J\'ai du parfois **modifier l\'API**, et apprendre sa logique. \
        Egalement j\'ai pu monter en competence en TDD, en construisant des **tests unitaires** et **end-to-end**.",
 
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     title: "Migration automatisée de contenu d'une plateforme vidéo (Nudgis)",
     projectContext: 'Projet professionnel chez Ubicast (alternance)',
     description:
-      "Migration automatisée depuis une platefome vidéo concurrente vers la plateforme *Nudgis*, afin que les clients aient tous le contenu presentable lors du passage à la solution d'Ubicast. \
+      "Migration automatisée depuis une platefome vidéo concurrente vers la plateforme *Nudgis*, afin que les clients aient tout le contenu presentable lors du passage à la solution d'Ubicast. \
       \n \n Il a fallu **annalyser l'API de la plateforme concurrente**, et faire en sorte de **reproduire toute l'arboresence** sur la solution d'Ubicast en transférant les médias de facon massive, et de **transférer toutes les méta-données** possibles. \
       Le projet est open-source et accessible publiquement.",
     stack: ['Python', 'Scripting', 'Data fetching', 'Video computing', 'TDD'],
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     projectContext: 'Projet universitaire autonome en groupe - EFREI',
     description:
       'Proposer des recettes en accord avec les fruits et légumes de saisons. \n \
-      Possibilités d\avoir des recettes de saison mais aussi de voir ce qu\'il est possible de faire avec certains ingrédients',
+      Possibilités d\'\avoir des recettes de saison mais aussi de voir ce qu\'il est possible de faire avec certains ingrédients',
     stack: ['React', 'Next', 'MUI', 'Express.js', 'MongoDB'],
     repositories: [
       {
@@ -90,7 +90,8 @@ export const projects: Project[] = [
     projectContext: 'Projet universitaire en duo - CNAM',
     description:
       "Messagerie éphémère et privée. \n \
-      Le but est pouvoir créer des conversations privées joignables seulement via un ID unique, et qu'elles soient au bout d'un temps donnée. Le temps peut etre configurée.",
+      Messagerie avec des conversations privées joignables seulement via un ID unique, et qu'elles soient supprimé au bout d'un temps donnée. \
+      Le temps peut etre configurée.",
     stack: ['React Native', 'Docker', 'Django Rest', 'MySQL'],
     repositories: [
       {
@@ -109,10 +110,10 @@ export const projects: Project[] = [
     title: '[ En projet ] JukeBoxify',
     projectContext: 'Projet personnel',
     description:
-      'Permettre à des personnes d’ajouter des morceaux à une liste de lecture Spotify maitre en cours. \
-       Pas besoin de plusieurs comptes spotify et d\'être sur le même réseau, juste un seul compte. \
-      \n Il suffirait d\'avoir soit un lien, soit un QR Code partagé. Le compte maitre peut configurer les modalites d\'ajout ou d\autres options',
-    stack: ['React', 'Next', 'MUI', 'PWA', 'Express.js', 'Prisma', 'MongoDB'],
+      'Permettre à des personnes d\'ajouter des morceaux à une liste de lecture Spotify maitre en cours. \
+       Pas besoin de plusieurs comptes spotify et d\'être sur le même réseau; juste un seul compte. \
+      \n Il suffirait d\'avoir soit un lien, soit un QR Code partagé. Le compte maitre peut configurer les modalités d\'ajout ou d\autres options',
+    stack: ['React', 'Next', 'tailwind CSS', 'PWA', 'Express.js', 'Prisma'],
     repositories: [],
     projectLink: '',
   },
@@ -124,7 +125,6 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       year: '2020 - 2023',
       title: 'Développeur Fullstack Apprenti',
       organisation: 'Ubicast',
-      // each item of array mark a line. So `,` is like a breakline
       description:
       'Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
       \n**Missions** :  \n \
@@ -147,7 +147,8 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       title: 'Développeur mobile stagiaire',
       organisation: 'MUUZ Excellence / Projet MVP EKTOR',
       description:
-      'Participation à l\'élaboration du MVP (prototype) de l\'application mobile EKTOR: Application de prévision des ventes et des besoins RH pour restaurateurs. \
+      'Participation à l\'élaboration du MVP (prototype) de l\'application mobile EKTOR: \
+       Application de prévision des ventes et des besoins RH pour les restaurateurs. \
       \n **Mission** : \
        \n- Construction et architectures de certaines vues mobiles \n \
        \n- Developpement d’une partie de l’API Rest \n \n \
