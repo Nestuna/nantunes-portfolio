@@ -16,7 +16,7 @@ export const skills: Skill[] = [
   { name: 'reactquery', title: 'Tanstack-React Query' },
   { name: 'zustand' },
   { name: 'jest' },
-  { name: 'playwirght' },
+  { name: 'playwright' },
   { name: 'webdriverio', title: 'Webdriver I/O' },
   { name: 'python' },
   { name: 'fastapi', title: 'FastAPI' },
