@@ -16,7 +16,7 @@ export const SkillsGrid = ({ skills }: SkillsGridProps) => {
       id="skills"
       spacing="3em"
       py="1em"
-      maxW="600px"
+      maxW="400px"
       justify="space-evenly">
       {skills.map((skill: Skill, index: number) => {
         const title = skill.title || skill.name

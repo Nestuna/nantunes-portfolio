@@ -12,17 +12,17 @@ apprendre de nouvelles pratiques.
 export const skills: Skill[] = [
   { name: 'typescript' },
   { name: 'react' },
-  { name: 'angular' },
+ // { name: 'angular' },
   { name: 'reactquery', title: 'Tanstack-React Query' },
   { name: 'zustand' },
   { name: 'jest' },
   { name: 'playwright' },
-  { name: 'webdriverio', title: 'Webdriver I/O' },
+  // { name: 'webdriverio', title: 'Webdriver I/O' },
   { name: 'python' },
   { name: 'fastapi', title: 'FastAPI' },
   { name: 'pytest' },
-  { name: 'gitlabci', title: 'Gitlab CI' },
-  { name: 'docker' },
+  // { name: 'gitlabci', title: 'Gitlab CI' },
+  // { name: 'docker' },
 ]
 
 export const projects: Project[] = [
