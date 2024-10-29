@@ -50,7 +50,7 @@ export default function RootLayout({
               <Divider sx={{ borderColor: 'var(--foreground) !important' }} />
               <Box
                 id="main-content"
-                flex="3"
+                flex="2"
                 h={{ base: 'auto', lg: '90vh' }}
                 p="1.5em"
                 overflowY={{ base: 'unset', lg: 'auto' }}
