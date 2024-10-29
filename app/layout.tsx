@@ -45,7 +45,7 @@ export default function RootLayout({
                 <SideHeader />
               </SlideFade>
             </Box>
-            <VStack flex="3">
+            <VStack flex="2">
               <NavList links={navTitles} />
               <Divider sx={{ borderColor: 'var(--foreground) !important' }} />
               <Box
