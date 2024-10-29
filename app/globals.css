@@ -2,17 +2,6 @@
   --background: linear-gradient(to bottom right, #0d0c12, #231f2e 50%);
   --foreground: #292436;
   --primary: #ffaa6b;
-  --border-background: linear-gradient(
-    120deg,
-    #f79533,
-    #f36f5586,
-    #ef4e7b,
-    #a166ab,
-    #f79533,
-    #f37055,
-    #ef4e7b,
-    #de8faf
-  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,9 +12,6 @@
   }
 }
 
-body {
-  background: var(--background) !important;
-}
 
 #main-content::-webkit-scrollbar {
   width: 12px;
