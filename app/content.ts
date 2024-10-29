@@ -118,14 +118,14 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       title: 'Développeur React / FastAPI ',
       organisation: 'Ayomi',
       description:
-      `Fintech de levé de fonds, centrée sur les PME, se basant sur le reseau des porteurs de projets. \
+      `Fintech de levé de fonds, centrée sur les PME, se basant sur le reseau des porteurs de projets. \n
       \n**Missions** :  \n \
       \n-  Interface de la Gestion des Campagnes de Mails \n
-            - Listing des campagnes, actions groupés sur mails et templates \n
-            - Overview des projets sur les donnees decisives. \n
+      -> Listing des campagnes, actions groupés sur mails et templates \n
+      -> Overview des projets sur les donnees decisives. \n
       \n-   Developpement de bots Linkedin pour dermarchage de prospects. Construction d’un monitoring. \n
-            Architecture et construction de l’API et la BDD, pour stocké les données scrappées \n
-            Interfacage pour controler les bots, et enclencher certaine decisions importante ou envoit de messages \n \n \
+      -> Architecture et construction de l’API et la BDD, pour stocké les données scrappées \n
+      -> Interfacage pour controler les bots, et enclencher certaine decisions importante ou envoit de messages
       `,
       skills: [
         'Typescript',
@@ -145,7 +145,7 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       title: 'Développeur Fullstack',
       organisation: 'Ubicast',
       description:
-      `Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
+      `Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \n
       \n**Missions** :  \n \
       \n-   Design et refonte UI / UX  intégrale de la navigation de Nudgis  \n \
       \n-   Automatisation de la migration du contenu vidéo d\’une plateforme externe  vers Nudgis. \n \n \
@@ -166,12 +166,12 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       title: 'Développeur mobile stagiaire',
       organisation: 'MUUZ Excellence / Projet MVP EKTOR',
       description:
-      'Participation à l\'élaboration du MVP (prototype) de l\'application mobile EKTOR: \
-       Application de prévision des ventes et des besoins RH pour les restaurateurs. \
+      `Participation à l\'élaboration du MVP (prototype) de l\'application mobile EKTOR: \
+       Application de prévision des ventes et des besoins RH pour les restaurateurs. \n
       \n **Mission** : \
        \n- Construction et architectures de certaines vues mobiles \n \
-       \n- Developpement d’une partie de l’API Rest \n \n \
-       Full Remote',
+       \n- Developpement d’une partie de l’API Rest \n
+       Full Remote`,
       skills: ['React Native', 'Django Rest', 'Développement Mobile'],
     },
     {
