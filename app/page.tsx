@@ -17,8 +17,8 @@ const Home = () => {
       offsetY="15vw">
       <Stack h={{base: 'auto', lg :"75vh"}}>
         <About text={about}/>
-        <Projects projects={projects} />
         <Resume experiences={experiences}/>
+        <Projects projects={projects} />
       </Stack>
     </SlideFade>
   )
