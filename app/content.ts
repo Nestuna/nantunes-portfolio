@@ -1,22 +1,25 @@
 import { Experience, Project, Skill } from './types'
 
 export const about = `
-  Actuellement à la recherche d'un poste en développement web. J'ai une forte appétence pour la construction d'interfaces utilisateurs,
-  dans tous ses aspects; mais je sais aussi construire des structures back-end solides.
-  Mes soft-skills sont assez avancées, du à mes expériences passées dans d'autres domaines,
-  et j'ai pu développer des compétences techniques solides lors de mes 3 ans d'alternance. \n
-  Communication et efficacité sont mes crédos.
+Mon expertise inclut la participation active à des projets web, de la
+conception à l'implémentation. Bien que ma préférence se porte sur
+le développement front-end, j'apprécie également la mise en place
+et l'architecture d'API. Je suis quelqu’un de curieux, toujours motivé à
+apprendre de nouvelles pratiques.
 `
 
 // image name must correspond to skill name : /images/[skill].png
 export const skills: Skill[] = [
   { name: 'typescript' },
-  { name: 'angular' },
   { name: 'react' },
+  { name: 'angular' },
+  { name: 'reactquery', title: 'Tanstack-React Query' },
+  { name:'zustand' },
   { name: 'jest' },
+  { name: 'playwirght' },
   { name: 'webdriverio', title: 'Webdriver I/O' },
   { name: 'python' },
-  { name: 'django' },
+  { name: 'fastapi', title: 'FastAPI },
   { name: 'pytest' },
   { name: 'gitlabci', title: 'Gitlab CI' },
   { name: 'docker' },
@@ -42,7 +45,7 @@ export const projects: Project[] = [
   {
     year: '2022-2023',
     title: "Refonte UI / UX d'une plateforme vidéo",
-    projectContext: 'Projet professionnel chez Ubicast (alternance)',
+    projectContext: 'Projet professionnel chez Ubicast',
     description:
       "**Design et developpement** de la refonte UI / UX  intégrale de la navigation de *Nudgis*. \
        \n *Nudgis* est une solution de plateforme vidéo prive d\'e-learning à destination d\'institutions du superieur ou organisation publique ou privée. \n \
@@ -56,7 +59,7 @@ export const projects: Project[] = [
   {
     year: '2020-2021',
     title: "Migration automatisée de contenu d'une plateforme vidéo (Nudgis)",
-    projectContext: 'Projet professionnel chez Ubicast (alternance)',
+    projectContext: 'Projet professionnel chez Ubicast',
     description:
       "Migration automatisée depuis une platefome vidéo concurrente vers la plateforme *Nudgis*, afin que les clients aient tout le contenu presentable lors du passage à la solution d'Ubicast. \
       \n \n Il a fallu **annalyser l'API de la plateforme concurrente**, et faire en sorte de **reproduire toute l'arboresence** sur la solution d'Ubicast en transférant les médias de facon massive, et de **transférer toutes les méta-données** possibles. \
@@ -105,25 +108,40 @@ export const projects: Project[] = [
     ],
     projectLink: '',
   },
-  {
-    year: '2024',
-    title: '[ En projet ] JukeBoxify',
-    projectContext: 'Projet personnel',
-    description:
-      'Permettre à des personnes d\'ajouter des morceaux à une liste de lecture Spotify maitre en cours. \
-       Pas besoin de plusieurs comptes spotify et d\'être sur le même réseau; juste un seul compte. \
-      \n Il suffirait d\'avoir soit un lien, soit un QR Code partagé. Le compte maitre peut configurer les modalités d\'ajout ou d\autres options',
-    stack: ['React', 'Next', 'tailwind CSS', 'PWA', 'Express.js', 'Prisma'],
-    repositories: [],
-    projectLink: '',
-  },
+ 
 ]
 
 export const experiences: Record<'pro' | 'training', Experience[]> = {
   pro: [
     {
-      year: '2020 - 2023',
-      title: 'Développeur Fullstack Apprenti',
+      year: '2024 | depuis 1 an ',
+      title: 'Développeur React / FastAPI ',
+      organisation: 'Ayomi',
+      description:
+      'Fintech de levé de fonds, centrée sur les PME, se basant sur le reseau des porteurs de projets. \
+      \n**Missions** :  \n \
+      \n-  Interface de la Gestion des Campagnes de Mails \n
+            - Listing des campagnes, actions groupés sur mails et templates \n
+            - Overview des projets sur les donnees decisives. \n
+      \n-   Developpement de bots Linkedin pour dermarchage de prospects. Construction d’un monitoring. \n
+            Architecture et construction de l’API et la BDD, pour stocké les données scrappées \n
+            Interfacage pour controler les bots, et enclencher certaine decisions importante ou envoit de messages \n \n \
+      ',
+      skills: [
+        'Typescript',
+        'React',
+        'Tanstack-React Query',
+        'Zustand',
+        'FastAPI',
+        'Jest',
+        'Playwright',
+        'Gitlab CI',
+        'Docker',
+        'Figma',
+      ],
+    {
+      year: '2020 - 2023 | 3 ans',
+      title: 'Développeur Fullstack',
       organisation: 'Ubicast',
       description:
       'Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
