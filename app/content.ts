@@ -118,7 +118,7 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       title: 'Développeur React / FastAPI ',
       organisation: 'Ayomi',
       description:
-      'Fintech de levé de fonds, centrée sur les PME, se basant sur le reseau des porteurs de projets. \
+      `Fintech de levé de fonds, centrée sur les PME, se basant sur le reseau des porteurs de projets. \
       \n**Missions** :  \n \
       \n-  Interface de la Gestion des Campagnes de Mails \n
             - Listing des campagnes, actions groupés sur mails et templates \n
@@ -126,7 +126,7 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
       \n-   Developpement de bots Linkedin pour dermarchage de prospects. Construction d’un monitoring. \n
             Architecture et construction de l’API et la BDD, pour stocké les données scrappées \n
             Interfacage pour controler les bots, et enclencher certaine decisions importante ou envoit de messages \n \n \
-      ',
+      `,
       skills: [
         'Typescript',
         'React',
@@ -138,17 +138,18 @@ export const experiences: Record<'pro' | 'training', Experience[]> = {
         'Gitlab CI',
         'Docker',
         'Figma',
-      ],
+      ]
+    },
     {
       year: '2020 - 2023 | 3 ans',
       title: 'Développeur Fullstack',
       organisation: 'Ubicast',
       description:
-      'Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
+      `Solutions d\’e-learning clé en main : Enregistreur optimisé  (Miris)  et Plateforme Vidéo (Nudgis).  \
       \n**Missions** :  \n \
       \n-   Design et refonte UI / UX  intégrale de la navigation de Nudgis  \n \
       \n-   Automatisation de la migration du contenu vidéo d\’une plateforme externe  vers Nudgis. \n \n \
-      Remote Partiel',
+      `,
       skills: [
         'Angular',
         'Typescript',
