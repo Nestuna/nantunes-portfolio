@@ -45,12 +45,13 @@ export default function RootLayout({
                 <SideHeader />
               </SlideFade>
             </Box>
-            <VStack flex="2">
+            <VStack flex="3">
               <NavList links={navTitles} />
               <Divider sx={{ borderColor: 'var(--foreground) !important' }} />
               <Box
                 id="main-content"
                 h={{ base: 'auto', lg: '90vh' }}
+                flex='3'
                 p="1.5em"
                 overflowY={{ base: 'unset', lg: 'auto' }}
                 overflowX={{ base: 'unset', lg: 'hidden' }}
