@@ -12,6 +12,9 @@
   }
 }
 
+body {
+  background: var(--background) !important;
+}
 
 #main-content::-webkit-scrollbar {
   width: 12px;
