@@ -3,7 +3,6 @@ import {
   Tooltip,
   Wrap,
   WrapItem,
-  useBoolean,
 } from '@chakra-ui/react'
 import { Skill } from '@/app/types'
 import { Image } from '@chakra-ui/react'
@@ -31,7 +30,7 @@ export const SkillsGrid = ({ skills }: SkillsGridProps) => {
                 <Image
                   src={`/images/${skill.name}.png`}
                   alt={title}
-                  boxSize={{ base: '40px', lg: '40px', '2xl': '50px' }}
+                  boxSize={40}
                 />
               </Tooltip>
             </ScaleFade>
