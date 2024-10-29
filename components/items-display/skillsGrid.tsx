@@ -30,7 +30,7 @@ export const SkillsGrid = ({ skills }: SkillsGridProps) => {
                 <Image
                   src={`/images/${skill.name}.png`}
                   alt={title}
-                  boxSize={40}
+                  boxSize={{ base: '40px'}}
                 />
               </Tooltip>
             </ScaleFade>
